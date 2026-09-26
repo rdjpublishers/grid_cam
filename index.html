@@ -590,6 +590,9 @@ input:focus, textarea:focus { outline: none; border-color: var(--accent); box-sh
 .footer-sitemap { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.78rem; transition: color 0.15s; }
 .footer-sitemap:hover { color: #a5b4fc; }
 .footer-copy { color: rgba(255,255,255,0.28); font-size: 0.78rem; }
+.footer-disclosure { color: rgba(255,255,255,0.32); font-size: 0.72rem; font-style: italic; max-width: 640px; line-height: 1.55; margin: 0; }
+.footer-disclosure a { color: rgba(255,255,255,0.5); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.18); text-underline-offset: 2px; transition: color 0.15s; }
+.footer-disclosure a:hover { color: #a5b4fc; text-decoration-color: currentColor; }
 
 /* ===== RESPONSIVE (sidebar/hamburger/footer) ===== */
 @media (max-width: 768px) {
@@ -828,6 +831,10 @@ input:focus, textarea:focus { outline: none; border-color: var(--accent); box-sh
       <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       Terms &amp; Conditions
     </a>
+    <a class="nav-btn" href="https://rdjpublishers.com/disclaimer.html">
+      <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      Disclaimer
+    </a>
     <a class="nav-btn" href="https://rdjpublishers.com/sitemap.xml">
       <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.2L11 16M16 7.2L13 16M8.4 6h7.2"/></svg>
       Sitemap
@@ -1021,9 +1028,11 @@ input:focus, textarea:focus { outline: none; border-color: var(--accent); box-sh
         <a href="https://rdjpublishers.com/contact.html">Contact</a>
         <a href="https://rdjpublishers.com/privacy-policy.html">Privacy Policy</a>
         <a href="https://rdjpublishers.com/terms.html">Terms &amp; Conditions</a>
+        <a href="https://rdjpublishers.com/disclaimer.html">Disclaimer</a>
       </nav>
       <a class="footer-sitemap" href="https://rdjpublishers.com/sitemap.xml">Sitemap</a>
       <p class="footer-copy">© <span id="footerYear">2026</span> RDJ Publishers. All rights reserved.</p>
+      <p class="footer-disclosure">This site may display ads served by Google AdSense. See our <a href="https://rdjpublishers.com/privacy-policy.html">Privacy Policy</a> for details.</p>
     </div>
   </footer>
 </div>
