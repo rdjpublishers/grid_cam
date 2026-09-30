@@ -63,14 +63,75 @@
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Is Grid Cam free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Grid Cam is 100% free with no sign-up, no watermark, and no limit on how many grids you create." } },
-      { "@type": "Question", "name": "Are my photos uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Grid Cam works entirely inside your browser. Your camera stream and photos are never uploaded or stored on any server." } },
-      { "@type": "Question", "name": "Can I import photos instead of using the camera?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, every tile lets you either take a photo with your camera or import one from your gallery, then scale and position it before confirming." } }
-    ]
-  }
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Grid Cam really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There is no cost, no account, no watermark, and no cap on how many grids you create."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to install an app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Grid Cam runs in a modern web browser on phones, tablets, and computers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use photos I already have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each tile has an \"Import from Gallery\" option, so you can mix live shots with saved photos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the tile shapes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Square and rectangle tiles create a grid of rows and columns. Circle creates one round image divided into equal pie slices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change a photo after placing it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Tap any filled tile to retake it, replace it from your gallery, or remove it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tiles can I have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For square and rectangle layouts you choose 1 to 6 rows and 1 to 6 columns. Circle layouts offer 2, 4, 6, or 8 slices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will grid lines appear in my image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if you turn them on. Grid lines are off by default, so tiles sit flush together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Grid Cam work without a camera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your device has no camera, or you prefer not to grant access, import all your photos from your gallery instead."
+      }
+    }
+  ]
+}
   </script>
 
   <link rel="icon" type="image/png" href="Logo.png" />
@@ -777,6 +838,17 @@ input:focus, textarea:focus { outline: none; border-color: var(--accent); box-sh
   .fs-topbar-title { font-size: 0.78rem; }
   .camera-mask, .adjust-mask { max-width: 92vw !important; }
 }
+
+/* Content section */
+.gc-content { max-width: 860px; margin: 2.5rem auto 0; padding: 0 0.1rem 1rem; color: var(--text); }
+.gc-content h2 { font-size: 1.35rem; font-weight: 700; margin: 2rem 0 0.75rem; font-family: var(--font-head); letter-spacing: -0.02em; color: var(--text); }
+.gc-content h2:first-child { margin-top: 0; }
+.gc-content p { font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 0.75rem; }
+.gc-content ul, .gc-content ol { margin: 0 0 0.75rem 1.25rem; padding: 0; }
+.gc-content li { font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 0.4rem; }
+.gc-content strong { color: var(--text); font-weight: 600; }
+.gc-content a { color: var(--accent); text-decoration: underline; }
+.gc-faq { display: flex; flex-direction: column; gap: 0.75rem; }
 </style>
 </head>
 <body>
@@ -932,38 +1004,96 @@ input:focus, textarea:focus { outline: none; border-color: var(--accent); box-sh
         </div>
       </div>
 
-      <section style="max-width:860px;margin:2.5rem auto 0;padding:0 0.1rem 1rem">
-        <h2 style="font-size:1.35rem;font-weight:700;margin-bottom:1.25rem;color:var(--text);font-family:var(--font-head);letter-spacing:-0.02em">Frequently Asked Questions</h2>
-        <div style="display:flex;flex-direction:column;gap:0.75rem">
+      <section class="gc-content" aria-label="About Grid Cam">
+        <h2>What is Grid Cam?</h2>
+        <p>Grid Cam is a free photo grid maker that runs in your web browser. You choose a layout, then fill each tile with a photo, either taken live with your camera or imported from your gallery. When every tile is filled, you can apply a filter and download the finished mosaic as one image.</p>
+        <p>You can pick from three tile shapes. Square and rectangle tiles build a grid of rows and columns. The circle option splits one round photo into equal pie slices (2, 4, 6, or 8). There is no sign-up, no watermark, and no limit on how many grids you make.</p>
+
+        <h2>How to use Grid Cam</h2>
+        <ol>
+          <li><strong>Choose a tile shape.</strong> Select Square, Rectangle, or Circle.</li>
+          <li><strong>Set the size.</strong> For square or rectangle, pick the number of rows and columns (1 to 6 each). For circle, choose how many slices you want. The live preview shows the layout and tile count as you change it.</li>
+          <li><strong>Decide on grid lines.</strong> Turn "Grid Lines" on if you want thin gaps between tiles. Leave it off for tiles that sit flush together.</li>
+          <li><strong>Press Start Capturing.</strong> You will see your empty grid and a counter showing how many tiles are filled.</li>
+          <li><strong>Tap a tile.</strong> Choose "Take Photo" to use your camera, or "Import from Gallery" to pick an existing picture. Your browser will ask for camera permission the first time.</li>
+          <li><strong>Position your photo.</strong> Drag to move it, and use pinch, scroll, or the sliders to zoom and rotate. Tap "Use Photo" to confirm.</li>
+          <li><strong>Fill the remaining tiles.</strong> You can tap any filled tile later to retake or replace it, or remove its photo.</li>
+          <li><strong>Pick a filter.</strong> Once all tiles are filled, a filter strip appears with looks such as Grayscale, Sepia, Vintage, and Noir.</li>
+          <li><strong>Download.</strong> Tap "Download Image" to save your mosaic as a PNG. Use "Edit Grid" to go back and change tiles, or "Start Over" to begin again.</li>
+        </ol>
+
+        <h2>Common use cases</h2>
+        <ul>
+          <li><strong>Before-and-after collages.</strong> Show a workout, garden, room makeover, or drawing in progress across a two-tile or four-tile grid.</li>
+          <li><strong>Photo stories.</strong> Tell a short story in six or eight frames, such as a recipe, a day out, or a trip.</li>
+          <li><strong>Social media posts.</strong> Combine several moments into a single image instead of posting them one by one.</li>
+          <li><strong>Product comparisons.</strong> Sellers can show one item from several angles, or several colors side by side.</li>
+          <li><strong>Classroom and project work.</strong> Students can document a science experiment or craft project step by step.</li>
+          <li><strong>Family and event keepsakes.</strong> Combine shots from a birthday, wedding, or reunion into one memento to share.</li>
+          <li><strong>Pie-slice portraits.</strong> Use the circle layout for a fun profile picture, or give each slice a different expression.</li>
+          <li><strong>Mood boards.</strong> Collect colors, textures, and objects on one canvas to plan a design, outfit, or decoration idea.</li>
+        </ul>
+
+        <h2>Tips for better results</h2>
+        <ul>
+          <li><strong>Plan the layout first.</strong> A 2 × 2 grid suits comparisons, while larger grids work better for stories and events.</li>
+          <li><strong>Keep lighting consistent.</strong> Photos shot in similar light look more cohesive side by side.</li>
+          <li><strong>Frame with the tile shape in mind.</strong> A rectangle tile is portrait-shaped, so hold your subject vertically. In circle mode, keep the subject near the center of each slice.</li>
+          <li><strong>Use the position screen.</strong> Zoom and rotate before confirming so faces and key details are not cropped awkwardly.</li>
+          <li><strong>Choose a filter last.</strong> One filter applied to the whole grid makes mixed photos feel like a single set.</li>
+          <li><strong>Consider grid lines.</strong> Gaps help when photos have similar backgrounds. Flush tiles look cleaner when the photos flow together.</li>
+          <li><strong>Retake freely.</strong> Tapping a filled tile lets you swap a blurry shot without redoing anything else.</li>
+        </ul>
+
+        <h2>Troubleshooting</h2>
+        <p><strong>The camera does not start.</strong> Check that you allowed camera access when your browser asked. If you blocked it, open your browser's site settings, allow the camera for this page, then reload.</p>
+        <p><strong>Another app is using the camera.</strong> Close video-call or camera apps, then try again.</p>
+        <p><strong>The camera image looks dark or blurry.</strong> Move to better light and wipe the lens. You can also take the photo with your phone's normal camera and use "Import from Gallery" instead.</p>
+        <p><strong>The photo is cropped wrongly.</strong> Use the Position &amp; Scale screen to drag, zoom, or rotate before tapping "Use Photo." You can reopen the tile at any time to adjust it.</p>
+        <p><strong>The filter strip is not showing.</strong> Filters appear only after every tile has a photo. Check the counter to see how many tiles remain.</p>
+        <p><strong>The download does not start.</strong> Make sure your browser allows downloads from this site, then check your downloads folder or history.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="gc-faq">
           <details class="faq-item">
-            <summary>Is Grid Cam completely free? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
-            <p>Yes, 100% free with no sign-up, no watermark, and no limit on how many photo grids you make.</p>
+            <summary>Is Grid Cam really free? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
+            <p>Yes. There is no cost, no account, no watermark, and no cap on how many grids you create.</p>
           </details>
           <details class="faq-item">
-            <summary>Do my photos get uploaded anywhere? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
-            <p>No. Your camera stream and every photo you take or import are processed entirely inside your browser and never leave your device.</p>
+            <summary>Do I need to install an app? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
+            <p>No. Grid Cam runs in a modern web browser on phones, tablets, and computers.</p>
           </details>
           <details class="faq-item">
-            <summary>Can I import photos from my gallery instead of the camera? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
-            <p>Yes — every tile lets you choose "Import from Gallery" as an alternative to the camera, then scale and position the photo before confirming.</p>
+            <summary>Can I use photos I already have? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
+            <p>Yes. Each tile has an "Import from Gallery" option, so you can mix live shots with saved photos.</p>
           </details>
           <details class="faq-item">
-            <summary>What tile shapes are available? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
-            <p>Square, rectangle (portrait), and circle. Square and rectangle build a rows × columns grid; circle instead splits a single photo circle into equal pie slices.</p>
+            <summary>What is the difference between the tile shapes? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
+            <p>Square and rectangle tiles create a grid of rows and columns. Circle creates one round image divided into equal pie slices.</p>
           </details>
           <details class="faq-item">
-            <summary>Will I see grid lines in my downloaded photo? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
-            <p>Not unless you want them. Grid lines are off by default so tiles sit flush together — flip the "Grid Lines" switch on if you'd like thin gaps instead.</p>
+            <summary>Can I change a photo after placing it? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
+            <p>Yes. Tap any filled tile to retake it, replace it from your gallery, or remove it.</p>
           </details>
           <details class="faq-item">
-            <summary>Can I apply filters to the finished grid? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
-            <p>Once every tile is filled, a filter strip appears below the finished image with one-tap looks like Grayscale, Sepia, Vintage, Noir and more.</p>
+            <summary>How many tiles can I have? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
+            <p>For square and rectangle layouts you choose 1 to 6 rows and 1 to 6 columns. Circle layouts offer 2, 4, 6, or 8 slices.</p>
           </details>
           <details class="faq-item">
-            <summary>Can I retake a photo after it's already in the grid? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
-            <p>Yes, tap any filled tile at any time to retake it with the camera or replace it with a gallery photo.</p>
+            <summary>Will grid lines appear in my image? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
+            <p>Only if you turn them on. Grid lines are off by default, so tiles sit flush together.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Grid Cam work without a camera? <span style="font-size:1.1rem;opacity:0.5">＋</span></summary>
+            <p>Yes. If your device has no camera, or you prefer not to grant access, import all your photos from your gallery instead.</p>
           </details>
         </div>
+
+        <h2>Privacy note</h2>
+        <p>Grid Cam processes everything inside your browser. Your camera stream, the photos you take or import, and the finished grid are not uploaded to any server. Once you close or reload the page, your work is gone unless you downloaded it, so save your image before leaving. For details about the site as a whole, including advertising, see the <a href="https://rdjpublishers.com/privacy-policy.html">Privacy Policy</a>.</p>
+
+        <h2>About Grid Cam and RDJ Publishers</h2>
+        <p>Grid Cam is a simple, focused tool for turning several photos into one shareable image without accounts, uploads, or clutter. It was made by <a href="https://rdjpublishers.com/">RDJ Publishers</a>, which builds free online tools designed to be quick, private, and easy for anyone to use. Learn more on the <a href="https://rdjpublishers.com/about.html">About page</a>, or reach the team through the <a href="https://rdjpublishers.com/contact.html">Contact page</a> with feedback or ideas.</p>
       </section>
     </div>
 
